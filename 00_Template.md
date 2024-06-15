@@ -27,4 +27,4 @@ JavaScript-codeblock:
 
 ---
 
-Terug naar [**overzicht**](./README.md#overview).
+&larr; Terug naar [**OVERZICHT**](./README.md#overview).
