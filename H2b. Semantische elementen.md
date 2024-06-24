@@ -1,5 +1,7 @@
 # Semantische elementen
 
+De **DOM-tree** is een Document Object Model boomstructuur van de webpagina.
+
 Om pagina's op te delen in **secties** kan je `<div>` elementen gebruiken, maar er werden ook nieuwe (semantische) elementen ontwikkeld:
 * [header](#header)
 * [nav](#nav)
@@ -78,7 +80,7 @@ Het `<section>` element laat toe om gerelateerde stukken informatie te **groeper
 
 ## `<article>`
 
-Het `<article>` element laat toe om informatie dat onafhankelijk is van de rest te groeperen:
+Het `<article>` element laat toe om informatie dat onafhankelijk is van de rest te groeperen, desnoods alles binnen de body van de webpagina:
 * Kan je het element lezen zonder de rest van de inhoud? Ja, gebruik `<article>`
 * Is de inhoud gerelateerd aan de rest van de webpagina, gebruik dan beter `<section>`, deze omvat vaak meerdere articles
 * Geen van beide, gebruik beter `<div>`
