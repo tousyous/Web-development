@@ -21,6 +21,14 @@ We splitsen de elementen op in [**Headings**](#headings), [**Gestructureerde tek
 
 Een verdere opdeling in blokken gebeurt met de `<div>`-tags.
 
+De hoofdtitel omvat een `h1`-element binnen een `header`-element:
+
+```html
+<header>
+    <h1>Titel van de pagina</h1>
+</header>
+```
+
 ## Gestructureerde tekst
 
 Tekst kan worden onderverdeeld in **paragrafen**:
@@ -75,12 +83,12 @@ Zowel genummerde als ongenummerde lijsten maken gebruik van *list items* `<li>` 
 </ul>
 ```
 
-Een *geneste lijst* vereist nog steeds een tekst bij elk list item:
+Een *geneste lijst* vereist nog steeds een list item:
 
 ```html
 <ul>
     <li>item 1</li>
-    <li>item 2    // vergeet de tekst hier niet!
+    <li>item 2    // vergeet het li-element niet!
         <ul>       
             <li>subitem 1</li>
             <li>subitem 2</li>    
@@ -166,14 +174,15 @@ Zie ook voorbeeld: [table_met_caption_colgroup_thead_tfoot_tbody.html](./HTML_te
 
 ## Hyperlinks, figuren en anchors
 
-**Verwijzen** naar gegevens op een andere pagina kan met behulp van de `<a>` tag
+**Verwijzen** naar gegevens op een andere pagina kan met behulp van de `<a>` tag, opgenomen in een `<p>`-element
 * Het `href` attribuut bevat het internetadres 
+* Met het `target` attribuut kan je bepalen waar de link wordt geopend (`"_self|_blank"`)
 * Een link kan ook verwijzen naar een gedeelte op en webpagina obv het `id`-attribuut (destination anchor) op de pagina
 
 ```html
-<a href="test.html">Link naar test</a>
-<a href="mailto:test@vives.be">Mail me</a>
-<a href="#Hoofdstuk2">Link naar hoofdstuk 2</a>
+<p><a href="test.html" target="_blank">Link naar test</a></p>
+<p><a href="mailto:test@vives.be" target="_blank">Mail me</a></p>
+<p><a href="#Hoofdstuk2" target="_blank">Link naar hoofdstuk 2</a></p>
 ```    
 
 Een **figuur** wordt ingevoegd met behulp van de `<img />`  tag
@@ -185,7 +194,17 @@ Een **figuur** wordt ingevoegd met behulp van de `<img />`  tag
 <img src="path/logo.jpg" alt="mijn logo" width="600" height="800"/>
 ```
 
-Om foto's correct op verschillende apparaten weer te geven, kan het nieuwe `<picture>` element gebruikt worden:
+Een `img`-element kan je in een **`figure`-element** met genest `figcaption`-element plaatsen
+* al dan niet met geneste p-elementen in de caption
+
+```html
+<figure>
+    <img src="image.jpg" alt="My image" />
+    <figcaption>My new image</figcaption>
+</figure>
+```
+
+Om foto's correct op verschillende apparaten weer te geven, kan het nieuwe **`<picture>`-element** gebruikt worden:
 * Is de eerste `source` niet correct, dan wordt de tweede gebruikt enz.
 * Mogelijke waarden van het `media`-attribuut:
     * `(min-width: 600px)`
