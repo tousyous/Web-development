@@ -7,18 +7,23 @@ Een **basispagina** bestaat uit volgende componenten:
 
 ## Overview
 
-### HTML
+### A) HTML
 
-> HTML = hypertext markup language
+> = hypertext markup language
 
 * W3C = world wide web consortium
 * WHATWG = web hypertext application technology working group
 * Webserver, webbrowser en opmaaktaal (HTML)
 
 <table border="1">
+    <caption><strong>Structureren van gegevens met behulp van HTML5 - Overzicht</strong></caption>
     <tr>
-        <td><a href="H1a. HTML5 basisstructuur.md">Basisstructuur van een HTML5-pagina</a></td>
-        <td>head-elementen:
+        <td>
+            <p><a href="./H1a. HTML5 basisstructuur.md">Basisstructuur van een HTML5-pagina</a></p>
+            <p><a href="./H2c. Formulieren.md">Formulieren</a></p>
+            <p><a href="./H3. HTML5-APIs.md">Extra: HTML5-API's</a></p>
+        </td>
+        <td><a href="./H1b. HEAD-tags.md"><code>head</code>-elementen</a>:
             <ul>
                 <li>title</li>
                 <li>meta</li>
@@ -26,7 +31,7 @@ Een **basispagina** bestaat uit volgende componenten:
             </ul></td>
     </tr>
     <tr>
-        <td>body-elementen:
+        <td><a href="./H2a. HTML-elementen.md"><code>body</code>-elementen</a>:
             <ul>
                 <li>h1 t.e.m. h6</li>
                 <li>paragrafen</li>
@@ -35,19 +40,25 @@ Een **basispagina** bestaat uit volgende componenten:
                 <li>anchors</li>
                 <li>figuren</li>
             </ul></td>
-        <td>semantische-elementen:
+        <td><a href="./H2b. Semantische elementen.md"><code>semantische</code>-elementen</a>:
+            <ul>
+                <li>header</li>
+                <li>nav</li>
+                <li>footer</li>
+                <li>section</li>
+                <li>article</li>
+                <li>aside</li>
+                <li>hgroup</li>
+            </ul>
         </td>
-    </tr>
-    <tr>
-        <td>Formulieren</td>
-        <td>HTML5-API's</td>
     </tr>
 </table>
 
 &nbsp;
+---
 
-### CSS
-### JavaScript
+### B) CSS
+### C) JavaScript
 
 ## Notes
 
