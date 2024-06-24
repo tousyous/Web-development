@@ -21,6 +21,8 @@ Een voorbeeld:
 
 <link rel="stylesheet" href="styles/style.css" />
 ```
+
+Optioneel kan een `<style>`-blok voor opmaak van de webpagina worden toegevoegd.
 <br> 
 
 ---
