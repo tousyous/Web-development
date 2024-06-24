@@ -18,6 +18,8 @@ Voor een formulier gebruiken we de `<form>` tags
 </form>
 ```
 
+Een voorbeeldpagina met formulier: [form_met_labels.html](./HTML_templates/form_met_labels.html)
+
 ## Formulierobjecten
 
 Formulierobjecten worden met een `<input>` tag aangemaakt, *met uitzondering van een textarea en keuzelijst*. 
