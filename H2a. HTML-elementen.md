@@ -4,7 +4,7 @@ Er bestaan een 10-tal containertags of elementen om het document structuur te ge
 
 We splitsen de elementen op in [**Headings**](#headings), [**Gestructureerde tekst**](#gestructureerde-tekst), [**Lijsten**](#lijsten), [**Tabellen**](#tabellen) en [**Links en figuren**](#hyperlinks-figuren-en-anchors).
 
-[**Semantische elementen**](./H2.%20Semantische%20elementen.md) voor de opbouw van een HTML5-pagina worden afzonderlijk besproken.
+[**Semantische elementen**](./H2b.%20Semantische%20elementen.md) voor de opbouw van een HTML5-pagina worden afzonderlijk besproken.
 
 ## Headings
 

@@ -30,8 +30,8 @@ Om fouten in de structuur en tags na te gaan, kan een **validatietool** gebruikt
 * Het **root element** van een webpagina is `<html>`
     * Je kan de taal van de website als attribuut opnemen: `lang="nl"`
 * Verder opgedeeld in **twee delen**:
-    * [`<head>`-gedeelte](./H1.%20HEAD-tags.md): niet verplicht deel van de inhoud, maar vereist een `<title>`-tag
-    * `<body>`-gedeelte: de weer te geven content met behulp van [HTML-elementen](./H2.%20HTML-elementen.md)
+    * [`<head>`-gedeelte](./H1b.%20HEAD-tags.md): niet verplicht deel van de inhoud, maar vereist een `<title>`-tag
+    * `<body>`-gedeelte: de weer te geven content met behulp van [HTML-elementen](./H2a.%20HTML-elementen.md)
 
 ## Opbouw van een HTML-element
 
