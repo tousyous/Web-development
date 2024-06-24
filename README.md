@@ -28,6 +28,13 @@ Een **basispagina** bestaat uit volgende componenten:
 
 
 ### B) CSS
+
+> = Cascading style sheets
+
+* De opmaak van een webpagina wordt voorzien door **stylesheets**
+* CSS3 is nog steeds in ontwikkeling
+* Doet dienst als sjabloon met opmaakprofielen die je op elke pagina kan toepassen
+
 ### C) JavaScript
 
 ## Notes
