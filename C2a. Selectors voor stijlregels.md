@@ -10,9 +10,9 @@ Er bestaan verschillende soorten selectors:
 |Selector|Omschrijving|
 |---|---|
 |[Element-selector](#element-selector)|Selectie op basis van type element |
+|[Class-selector](#class--en-id-selectoren)|Selectie op basis van het attribuut class<br>(kan meerdere keren voorkomen)|
+|[Id-selector](#class--en-id-selectoren)|Selectie op basis van het unieke id-attribuut|
 |Attribuut-selector||
-|Class-selector||
-|Id-selector||
 |Pseudo-element selector ||
 |Pseudo-class selector||
 
@@ -63,6 +63,44 @@ Een **adjacent sibling-selector** is van toepassing op elementen die direct na e
 ```css
 h1 + h2 {
     color: blue;
+}
+```
+
+## Class- en id-selectoren
+
+Het is mogelijk een `class` of `id` attribuut aan een element toe te voegen
+* **Class** kan meerdere keren in hetzelfde document worden gebruikt
+    * Een element kan meerdere class waarden hebben `class="value1 value2"`
+* Een **id** is uniek voor een element in een document
+* Opmaak op basis van class of id wordt meer gebruikt dan op basis van element type (zie 2.2)
+
+&nbsp;
+
+Om een stijl op een element van een bepaalde **class** toe te passen wordt de punt `.` notatie gebruikt:
+
+```css
+.class-name {
+    color: blue;
+}
+
+/* Maak alle span elementen van p elementen met class="speciaal" op */
+p.speciaal span {
+    background-color: red;
+}
+```
+
+&nbsp;
+    
+In plaats van een het class attribuut kan ook het **unieke id attribuut** geselecteerd worden met behulp van de hashtag `#` notatie:
+
+```css
+#element-id {
+    color: blue;
+}
+
+/* het p-element met id="element-id" */
+p#element-id {
+    color: red;
 }
 ```
 
