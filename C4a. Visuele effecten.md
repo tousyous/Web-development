@@ -4,6 +4,8 @@
 
 Met borders kunnen randen worden ingesteld. Tegenwoordig kunnen ook images gebruikt worden en kunnen de hoeken worden afgerond (in volgorde volgens de wijzers van de klok: top-left, top-right, bottom-right, bottom left).
 
+Een template is beschikbaar: [effecten_border.html](./CSS_templates/effecten_border.html) met [effecten_border.css](./CSS_templates/effecten_border.css)
+
 |eigenschap|betekenis|waarden|
 |---|---|---|
 |border|shorthand voor border-width, border-style en border-color|`10px solid black`|
