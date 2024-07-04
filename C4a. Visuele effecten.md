@@ -1,5 +1,8 @@
 # Visuele effecten
 
+Overzicht:
+* [Border (randen)](#borders) inclusief schaduw, [afronden](#a-hoeken-afronden) en [border-image](#b-afbeelding-als-rand)
+
 ## Borders
 
 Met borders kunnen randen worden ingesteld. Tegenwoordig kunnen ook images gebruikt worden en kunnen de hoeken worden afgerond (in volgorde volgens de wijzers van de klok: top-left, top-right, bottom-right, bottom left).
