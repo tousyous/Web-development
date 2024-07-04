@@ -1,0 +1,17 @@
+div {
+    border: solid;
+    text-align: center;
+    width: 200px;
+}
+
+.left {
+    margin-right: auto;
+}
+
+.center {
+    margin: auto;
+}
+
+.right {
+    margin-left: auto;
+}
