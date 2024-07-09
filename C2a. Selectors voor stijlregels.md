@@ -9,12 +9,12 @@ Er bestaan verschillende soorten selectors:
 
 |Selector|Omschrijving|
 |---|---|
-|[Element-selector](#element-selector)|Selectie op basis van type element |
-|[Class-selector](#class--en-id-selectoren)|Selectie op basis van het attribuut class<br>(kan meerdere keren voorkomen)|
-|[Id-selector](#class--en-id-selectoren)|Selectie op basis van het unieke id-attribuut|
+|[Element-selector](#element-selector)|Selectie op basis van type element (h1, div, p)|
+|[Class-selector](#class--en-id-selectoren)|Selectie op basis van het attribuut **class**<br>(kan meerdere keren voorkomen)|
+|[Id-selector](#class--en-id-selectoren)|Selectie op basis van het unieke **id**-attribuut|
 |Attribuut-selector||
-|Pseudo-element selector ||
-|Pseudo-class selector||
+|[Pseudo-element selector](#pseudo-element-selectors) |Selecteert een deel van een element (eerste letter, voor of na, ...) |
+|[Pseudo-class selector](#pseudo-class-selector)|Selectie van een element op basis van een eigenschap (bezocht, actief, focus, ...)|
 
 
 ## Element-selector
@@ -66,6 +66,8 @@ h1 + h2 {
 }
 ```
 
+&nbsp;
+
 ## Class- en id-selectoren
 
 Het is mogelijk een `class` of `id` attribuut aan een element toe te voegen
@@ -103,7 +105,88 @@ p#element-id {
     color: red;
 }
 ```
+&nbsp;
 
+## Pseudo-element selectors
+
+Een pseudo-element is een denkbeeldig element, dat niet in het document voorkomt, maar waarvoor je wel een stijl kan definiëren. Deze selectie maakt gebruik van de `:` notatie en kan op 4 manieren worden gebruikt:
+
+|soort|omschrijving|
+|---|---|
+|`:first-line`|de eerste regel, niet de eerste zin van een element|
+|`:first-leter`|de eerste letter van een element|
+|`:before`<br>`:after`|laat toe om met het **content** attribuut extra tekst of afbeelding<br> *voor* of *na* een element toe te voegen|
+|`::selection`|aangepaste stijl voor wanneer de gebruiker tekst selecteert in de browser <br>(vanaf CSS3)|
+
+```css
+p:first-line {
+    font-weight: bold;
+}
+p:first-letter {
+    font-size: 24pt;
+}
+p:before {
+    content: "start tekst";
+    color: green;
+    font-style: italic;
+}
+p:after {
+    content: "einde tekst";
+}
+::selection {
+    color: red;
+    background-color: blue;
+}
+```
+
+&nbsp;
+
+## Pseudo-class selector
+
+Pas de opmaak aan op basis van **een eigenschap of kenmerk** van een element in plaats van op basis van naam, attributen of inhoud. Ook hier wordt opnieuw de `:` notatie gebruikt.
+
+De meest voorkomende pseudo-class selectoren:
+
+|notatie|omschrijving|
+|---|---|
+|`a:link`|niet bezochte hyperlink|
+|`a:visited`|bezochte hyperlink|
+|`a:active`|actieve hyperlink|
+|`::hover`|elementen waar de gebruiker over *hangt* met zijn muisaanwijzer|
+
+Een overzicht van ALLE mogelijke pseudo-classen is op de [mdn web docs](https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes) pagina terug te vinden.
+
+Enkele voorbeelden:
+
+```css
+/*de layout van een hyperlink*/
+a:link {
+    color: #999999;
+    text-decoration: none;
+}
+a:visited {
+    color: #999999;
+    text-decoration: none;
+}
+a:hover {
+    color: #999999;
+    text-decoration: underline;
+}
+a:active {
+    color: #999999;
+    text-decoration: none;
+}
+
+/*opmaak van de eerste paragraaf*/
+p:first-of-type {
+    background: #ff0000;
+}
+
+/*oneven rijen in een tabel*/
+tr:nth-child(2n+1) {
+    background-color: #ccc;
+}
+```
 
 <br>
 
