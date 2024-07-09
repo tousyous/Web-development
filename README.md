@@ -53,6 +53,10 @@ Overzicht:
 |---|
 | [Tekst-eigenschappen, Lettertype, Tekst achtergrond - kleur en afbeelding](./C5a.%20Tekst%20opmaak.md)|
 
+| C6. Navigatie |
+|---|
+|[Een horizontale navigatie met behulp van `<li>` in `<ul>` en de opmaak van `<a>`](./C6a.%20Navigatie.md)|
+
 | C7. Lay-out|
 |---|
 | [C7a. Pagina lay-out](./C7a.%20Pagina%20layout.md) *(normal flow, box model, visual formatting model, positioneringsschema)*|
