@@ -37,6 +37,8 @@ Hier wordt de weergave van de tekst zelf bepaald: het lettertype, de grootte en 
 |font-size|	tekengrootte (px, % of em, bij voorkeur niet px)|	`<px> / <em> / <%>` |
 |font-style|	stijl zoals italic en normal|	`normal / italic / oblique`|
 |font-weight	|dikte zoals normal en bold|	`normal / bold / bolder / lighter`|
+|font-variant|aangepast font zoals klein capitaal|`small-caps`|
+|color|de letterkleur|
 
 ```css
 .aangepast-font {
@@ -44,6 +46,7 @@ Hier wordt de weergave van de tekst zelf bepaald: het lettertype, de grootte en 
     font-size: 120%;
     font-style: italic;
     font-weight: bold;
+    color: darkblue;
 }
 ```
 
@@ -74,6 +77,7 @@ Belangrijkste tekst achtergrond eigenschappen:
 
 |eigenschap|betekenis|waarden|
 |---|---|---|
+|background|shorthand voor kleur, afbeelding, grootte, repeat ...||
 |background-color|	achtergrond kleur|	`<kleur> / transparent`|
 background-image|	achtergrond afbeelding|	`url("URI")`|
 |background-position|	beginpositie van de background-image|	`[ [top / center / bottom] // [left / center / right] ]`|
