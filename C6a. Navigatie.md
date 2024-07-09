@@ -7,10 +7,14 @@ Onderdeel van de navigatiestructuur zijn:
 * (Sitemap)
 * (Veelgestelde vragen)
 
+&nbsp;
+
 Om hoofd- en subnavigatie op te maken, worden drie concepten bekeken:
 * [het opmaken van een `<a>`-link in CSS](#a-opmaak-van-een-link-in-css)
 * [het `<li>`-element als structuur van de navigatie](#b-een-unordered-list-als-structuur-van-de-navigatie)
-* een horizontale navigatie in een `<ul>`
+* [een horizontale navigatie in een `<ul>`](#c-horizontale-navigatie-in-een-list)
+
+&nbsp;
 
 ## A) Opmaak van een link in CSS
 
@@ -87,8 +91,27 @@ HTML (basic):
 </ul>
 ```
 
-Daarnaast kan je met behulp van margin/padding, background-color, borders en het nesten van `ul`-lijsten aan uitgebreidere navigatie bekomen: zie template 
+Daarnaast kan je met behulp van **margin/padding, background-color, borders en het nesten** van `ul`-lijsten aan uitgebreidere navigatie bekomen: 
+* Template verticale navigatie [HTML](./CSS_templates/verticale_navigatie.html) en [CSS](./CSS_templates/verticale_navigatie.css)
 
+&nbsp;
+
+## C) Horizontale navigatie in een list
+
+Om de navigatie horizontaal te krijgen, moet de weergave van *block* naar ***inline*** gewijzigd worden:
+
+```css
+ul {
+    list-style: none;
+}
+li {
+    display: inline;
+    margin: 0 10px 0 0;
+}
+```
+
+Bekijk ook het uitgebreidere voorbeeld van één niveau:
+* Template horizontale navigatie [HTML](./CSS_templates/horitontale_navigatie_1_niveau.html) en [CSS](./CSS_templates/horitontale_navigatie_1_niveau.css)
 
 <br>
 
