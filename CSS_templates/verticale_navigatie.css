@@ -1,0 +1,54 @@
+/*alle hyperlinks op zelfde plaats zonder opmaak*/
+ul {
+    list-style: none;
+    margin: 0;
+    padding: 0;
+}
+
+li {
+    margin: 0;
+    padding: 0;
+    font-family: Verdana;
+}
+
+/*descendant selector*/
+li a {
+    display: block;
+    text-decoration: none;
+    padding: 2px 5px 2px 5px;
+    border-top: 1px solid #FFF;
+    border-right: 1px solid #FEB660;
+    border-bottom: 1px solid #FEB660;
+    border-left: 1px solid #FFF;
+    width: 100px;
+}
+
+li a:link, li a:visited {
+    background-color: #F2C793;
+    color: #E47C00;
+    font-weight: bold;
+}
+
+li a:hover, li a:active {
+    background-color: #E47C00;
+    color: #FFF;
+    font-weight: bold;
+}
+
+/*descendant subitems*/
+li li a:link, li li a:visited {
+    background-color: #F9E5CD;
+    color: #E47C00;
+    font-weight: normal;
+}
+
+li li a:hover, li li a:active {
+    background-color: #E47C00;
+    color: #FFF;
+    font-weight: normal;
+}
+
+/*indentatie van subitems*/
+ul ul {
+    margin: 0 0 0 25px;
+}
