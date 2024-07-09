@@ -167,15 +167,15 @@ De meest voorkomende pseudo-class selectoren:
 |---|---|
 |`a:link`|niet bezochte hyperlink|
 |`a:visited`|bezochte hyperlink|
-|`a:active`|actieve hyperlink|
 |`::hover`|elementen waar de gebruiker over *hangt* met zijn muisaanwijzer|
+|`a:active`|actieve hyperlink|
 
 Een overzicht van ALLE mogelijke pseudo-classen is op de [mdn web docs](https://developer.mozilla.org/en-US/docs/Web/CSS/Pseudo-classes) pagina terug te vinden.
 
-Enkele voorbeelden:
+Enkele voorbeelden (zie ook [C6a. Navigatie](./C6a.%20Navigatie.md) voor links in navigatie):
 
 ```css
-/*de layout van een hyperlink*/
+/*de layout van een hyperlink, in volgorde*/
 a:link {
     color: #999999;
     text-decoration: none;
