@@ -139,6 +139,22 @@ p:after {
 }
 ```
 
+Twee mogelijkheden om een **afbeelding/icoontje vóór een link** toe te voegen:
+
+```css
+/*met het :before pseudo-element*/
+a:before{
+    content: url("../images/link.png");
+}
+
+/*via background-image*/
+a.metBackgroundImage {
+    background-repeat: no-repeat;
+    background-image: url("../images/link.png");
+    padding-left: 16px; /*ruimte nodig voor image*/ 
+}
+```
+
 &nbsp;
 
 ## Pseudo-class selector
