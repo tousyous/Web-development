@@ -1,8 +1,37 @@
 # Visuele effecten
 
 Overzicht:
+* [Prefixen en hulpmiddelen](#prefixes-en-hulpmiddelen) voor verschillende browsers
 * [Border (randen)](#borders) inclusief schaduw, [afronden](#a-hoeken-afronden) en [border-image](#b-afbeelding-als-rand)
 * [Opmaak van lijsten](#opmaak-van-lijsten)
+
+## Prefixes en hulpmiddelen
+
+Niet alle features worden automatisch in alle browsers ondersteund. Experimentele ondersteuning maakt daarom gebruik van **prefixes**, die enkel door dat type browser worden herkend.
+
+|browser|prefix|
+|---|---|
+|Safari, iOS, Chrome, Edge, Brave, Opera| `-webkit-`|
+|Firefox, Thunderbird|`-moz-`|
+|Konqueror|`-khtml-`|
+
+Plaats steeds de eigenlijke CSS3 eigenschap **als laatste in de declaratie**, zodat deze de experimentele versie (met prefix) overschrijft.
+
+Een voorbeeld met border-radius:
+
+```css
+.rounded {
+    border: 2px solid;
+    padding: 10px;
+    width: 250px;
+    -webkit-border-radius: 10px; /* experimenteel */
+    border-radius: 10px; /* eigenlijke als laatste */
+}
+```
+
+Gelukkig zijn er **hulpmiddelen** om browser-specifieke CSS3 te schrijven:
+* CSS3 Generator: https://css3generator.com/ 
+* CollorZilla: https://www.colorzilla.com/gradient-editor/ 
 
 ## Borders
 
