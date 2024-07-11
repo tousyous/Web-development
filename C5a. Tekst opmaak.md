@@ -103,7 +103,9 @@ p.image {
 
 <br>
 
-Overige background image eigenschappen:
+De achtergrond van een element is steeds beperkt tot de *border box*, met andere woorden de padding en de content area. Het is dus niet mogelijk om een **afbeelding buiten de border** te krijgen (tenzij je `<div>`-elementen hiervoor nest).
+
+Overige `background-image` eigenschappen:
 
 |eigenschap|betekenis|waarden|
 |---|---|---|
