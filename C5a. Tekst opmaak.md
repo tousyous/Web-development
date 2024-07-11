@@ -2,6 +2,8 @@
 
 De  **bladspiegel** is hoe beeld- en tekstelementen over de bladzijde zijn verdeeld.
 
+Op het einde van deze pagina leer je een afbeelding als [browserachtergrond](#achtergrond-van-een-pagina) in te stellen.
+
 ## Tekst-properties
 
 Deze eigenschappen omvatten uitlijnen, onderlijning, indentering, capitalisatie en schaduw.
@@ -110,6 +112,22 @@ Overige background image eigenschappen:
 |background-origin|	laat background-image starten van de linkerboven hoek|	&nbsp;|
 
 <br>
+
+# Achtergrond van een pagina
+
+Het is mogelijk om een achtegrondafbeelding in te stellen voor de volledige pagina. Deze koppelen we aan het `<html>`-element.
+
+```css
+html {
+    background-image: url(afbeelding.jpg);
+    background-repeat: no-repeat; /* geen herhaling */
+    background-position: center center;
+    background-attachment: fixed; /* scrollt niet mee met de inhoud */
+    background-size: cover;
+}
+```
+
+Met de eigenschap `background-size: cover` wordt de achtergrond in de volledige browsergrootte geplaatst. 
 
 ---
 
