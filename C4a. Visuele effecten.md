@@ -2,6 +2,7 @@
 
 Overzicht:
 * [Border (randen)](#borders) inclusief schaduw, [afronden](#a-hoeken-afronden) en [border-image](#b-afbeelding-als-rand)
+* [Opmaak van lijsten](#opmaak-van-lijsten)
 
 ## Borders
 
@@ -77,6 +78,31 @@ Met behulp van de `border-image` eigenschap kan je een **afbeelding** als border
 |border-image-source|bronbestand|`url(URI)`|
 |border-image-slice|aantal px (zonder px te typen) of % dat van de boven, rechtse, onder, linkse rand wordt genomen om hoek, randmidden en één centrale slice te maken|`20 40 30 50`|
 |border-image-repeat|afbeelding herhalen, stretchen of afronden|`repeat / round / stretch`|
+
+<hr>
+
+## Opmaak van lijsten
+
+Om een lijst op te maken, wordt de `list-style` property van het `<ul>`-element gebruikt.
+
+|eigenschap|omschrijving|waarden|
+|---|---|---|
+|list-style|shorthand voor list-style-type, list-style-position en list-style-image |`square outside none`|
+|list-style-type| bepaalt het opsommingsteken|`disc / circle / square / decimal / decimal-leading-zero / none / ...`|
+|list-style-position|plaats van het opsommingsteken voorafgaand of in de voorziene ruimte | `outside / inside` 
+|list-style-image|laat toe een afbeelding te gebruiken|`url(path/to/file.png)`|
+
+```css
+.vierkantenlijst {
+    list-style: square outside none;
+}
+
+.lijstmetafbeelding {
+    list-style-image: url(images/bullet.png);
+}
+```
+
+Een overzicht met voorbeelden van lijstjes is hier terug te vinden: [HTML](./CSS_templates/lijstjes.html) en [CSS](./CSS_templates/lijstjes.css).
 
 <br>
 
