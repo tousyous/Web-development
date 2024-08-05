@@ -1,0 +1,74 @@
+.kalender {
+}
+
+table {
+    border: 4px solid #000000;
+    font: normal 12px/150% Arial, Helvetica, sans-serif;
+    border-collapse: collapse;
+    text-align: left;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+table caption {
+    background: #00D5FF;
+    color: #000000;
+    font-size: 15px;
+    font-weight: bold;
+}
+
+ table td,  table th, caption {
+    padding: 3px 3px;
+}
+
+ table thead th {
+    background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #000A99), color-stop(1, #000A99));
+    background: -moz-linear-gradient(center top, #000A99 5%, #000A99 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#000A99', endColorstr='#000A99');
+    background-color: #000A99;
+    color: #00D5FF;
+    font-size: 15px;
+    font-weight: normal;
+    border-left: 1px dotted #00D5FF;
+     border-bottom: 1px dotted #00D5FF;
+}
+
+ table thead th:first-child {
+    border: none;
+}
+
+
+ table tbody td {
+    color: #000000;
+    border-left: 1px dotted #000000;
+    font-size: 15px;
+    border-bottom: 1px dotted #000000;
+    font-weight: normal;
+}
+
+ table tbody td:first-child {
+    border-left: none;
+}
+
+ table tbody tr:last-child td {
+    border-bottom: none;
+}
+
+table tbody td:first-child, table tbody td:last-child {
+    background-color: rgb(255,220,220);
+    color: darkgreen;
+}
+
+table tbody td.vrijedag {
+    background: rgb(250,120,120);
+}
+
+table tbody td.anderemaand {
+    background: grey;
+    color: darkslategrey;
+}
+
+a {
+    font-weight: bold;
+    color: dodgerblue;
+}
