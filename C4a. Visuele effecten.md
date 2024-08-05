@@ -4,6 +4,7 @@ Overzicht:
 * [Prefixen en hulpmiddelen](#prefixes-en-hulpmiddelen) voor verschillende browsers
 * [Border (randen)](#borders) inclusief schaduw, [afronden](#a-hoeken-afronden) en [border-image](#b-afbeelding-als-rand)
 * [Opmaak van lijsten](#opmaak-van-lijsten)
+* [Opmaak van tabellen](#opmaak-van-tabellen)
 
 ## Prefixes en hulpmiddelen
 
@@ -32,6 +33,10 @@ Een voorbeeld met border-radius:
 Gelukkig zijn er **hulpmiddelen** om browser-specifieke CSS3 te schrijven:
 * CSS3 Generator: https://css3generator.com/ 
 * CollorZilla: https://www.colorzilla.com/gradient-editor/ 
+
+Om na te gaan welke browsers bepaalde HTML, CSS of JS eigenschappen ondersteunen, kan je volgende site gebruiken: https://www.caniuse.com 
+
+<br>
 
 ## Borders
 
@@ -108,7 +113,7 @@ Met behulp van de `border-image` eigenschap kan je een **afbeelding** als border
 |border-image-slice|aantal px (zonder px te typen) of % dat van de boven, rechtse, onder, linkse rand wordt genomen om hoek, randmidden en één centrale slice te maken|`20 40 30 50`|
 |border-image-repeat|afbeelding herhalen, stretchen of afronden|`repeat / round / stretch`|
 
-<hr>
+<br>
 
 ## Opmaak van lijsten
 
@@ -134,6 +139,11 @@ Om een lijst op te maken, wordt de `list-style` property van het `<ul>`-element 
 Een overzicht met voorbeelden van lijstjes is hier terug te vinden: [HTML](./CSS_templates/lijstjes.html) en [CSS](./CSS_templates/lijstjes.css).
 
 <br>
+
+## Opmaak van tabellen
+
+Gebruik de volgende webpagina om te experimenteren met opmaak van tabellen: https://tablestyler.com. 
+
 
 ---
 
