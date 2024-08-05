@@ -50,7 +50,34 @@ div {
 }
 ```
 
-## B) !important regels
+## B) Specificiteit
+
+Het is mogelijk om de **specificiteit** van een selector `s` te berekenen als een code van 4 cijfers `abcd`. Hoe hoger de specificiteit, hoe meer voorrang:
+* `a`: is de stijlregel gebaseerd op een style *attribuut* ipv een selector?
+* `b`: aantal ID's in de selector
+* `c`: aantal gebruikte attributen of pseudo-classen in de selector
+* `d`: aantal gebruikte elementen of pseudo-elementen in de selector
+
+|voorbeeld selector|specificiteit|
+|---|---|
+|`li`|0001|
+|`.someclass`|0010|
+|`li.someclass`|0011|
+|`#eenid`|0100|
+|`div#eenid`|0101|
+
+Het is mogelijk om de specifivciteit te berekenen op https://specificity.keegan.st
+
+## C) `!important` regels
+
+Wanneer `!important` op het einde van een stijlregel wordt toegevoegd, wint deze altijd, ongeacht de volgorde.
+
+```css
+p {
+    padding: 0px !important;
+    padding-left: 10px; /* zal niet worden toegepast */
+}
+```
 
 <br>
 
