@@ -85,3 +85,18 @@ ul.checklist {
 .checked {
     list-style-image: url(./images/checkbox.png);
 }
+
+/* alternatieve checklist obv specificiteit */
+
+.checklist2 {
+    list-style: none;
+}
+
+.checklist2 li::before {
+    content: "\2610";
+    padding-right: 10px;
+}
+
+.checklist2 li.checked2::before {
+    content: "\2611 ";
+}
