@@ -3,7 +3,7 @@
 De opbouw en weergave van een pagina wordt bepaald door:
 * het document [normal flow](#normal-flow-of-natuurlijke-flow)
 * het [box-model](#de-box)
-* visual formatting model
+* [visual formatting model](#visual-formatting-model)
 * en positioneringsschema
 
 ## Normal flow of natuurlijke flow
@@ -43,6 +43,28 @@ De som van alle afmetingen (inclusief margin) bepaalt de **grootte** van de box.
 * Om dit mogelijk te maken moet één van deze drie eigenschappen de waarde **auto** hebben: `margin-left` / `width` / `margin-right`
 
 De eigenschappen **width** en **height** bepalen de afmetingen van de inhoud, niet de margin, border en padding.
+
+## Visual formatting model
+
+Het boxmodel bepaalt enkel de afmeting van de elementen. De weergave van de elementen tov elkaar wordt bepaald door het **visual formatting model**. Dit model bepaalt of elementen:
+* naast elkaar worden gezet (*inline*)
+* of onder elkaar worden gezet (*blok*)
+
+<br>
+
+**Blokelementen** nemen de volledige breedte in beslag en hebben de waarde `display: block`. Deze worden *onder elkaar* geplaatst. Je kan ze wel combineren met een *inline* element. Voorbeelden:
+* `<h1>`
+* `<p>`
+
+Elementen die doorlopen in de regel worden **inline elementen** genoemd. Deze hebben de waarde `display: inline` of `display: inline-block`. De laatste plaatst een blokelement inline. Inline elementen worden horizontaal naast elkaar geplaatst. Voorbeelden:
+* `<span>`
+* `<em>`
+
+
+
+
+
+
 
 <br>
 
