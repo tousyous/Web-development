@@ -28,6 +28,28 @@ Voorbeeld:
 }
 ```
 
+Er zijn twee "simpele" mogelijkheden om **tekst verticaal te aligneren** in een element:
+
+```css
+/* voor één regel tekst */
+.vert_align {
+    height: 100px;
+    line-height: 100px;
+}
+
+/* voor meerdere regels tekst */
+.container {
+    display: table;
+    height: 100px; /* Voorbeeldhoogte */
+    width: 100%; /* Voorbeeldbreedte */
+    text-align: center; /* Horizontaal centreren, indien gewenst */
+}
+.content {
+    display: table-cell;
+    vertical-align: middle; /* Verticaal centreren */
+}
+```
+
 ## Lettertype
 
 Hier wordt de weergave van de tekst zelf bepaald: het lettertype, de grootte en stijlkenmerken zoals vet en cursief.
