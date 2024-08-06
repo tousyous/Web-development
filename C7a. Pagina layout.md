@@ -4,7 +4,7 @@ De opbouw en weergave van een pagina wordt bepaald door:
 * het document [normal flow](#normal-flow-of-natuurlijke-flow)
 * het [box-model](#de-box)
 * [visual formatting model](#visual-formatting-model)
-* en positioneringsschema
+* en [positioneringsschema](#het-positioneringsschema)
 
 ## Normal flow of natuurlijke flow
 
@@ -60,11 +60,57 @@ Elementen die doorlopen in de regel worden **inline elementen** genoemd. Deze he
 * `<span>`
 * `<em>`
 
+## Het positioneringsschema
+
+Met het positioneringsschema kan je elementen plaatsen buiten de *natuurlijke flow* van de pagina. 
+
+We maken een onderscheid tussen:
+* zwevende (float)
+* relatieve
+* absolute
+* fixed positionering
+
+### A) Zwevende elementen
+
+Een zwevend element:
+* wordt langs de linker- of rechterrand van het *parent* element geplaatst
+* heeft een vaste breedte (`width`)
+* de andere boxen krijgen een plaats naast het *float* element en herkennen het float element niet meer in de normale flow van de pagina
+* om de volgende box na het float element te plaatsen wordt `clear` gebruikt
+
+```css
+.floatleft40 {
+    background: green;
+    float: left;
+    width: 40%;
+    height: 100px;
+    margin-right: 10px;
+}
+
+.floatright40 {
+    background: red;
+    float: right;
+    width: 40%;
+    height: 100px;
+}
+
+.normalflow {
+    background: blue;
+    height: 200px;
+}
+
+.clear {
+    clear: both;
+    background: blue;
+    height: 200px;
+}
+```
 
 
 
+### B) Relatief positioneren
 
-
+### C) Absoluut positioneren
 
 <br>
 
