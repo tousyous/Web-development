@@ -45,6 +45,10 @@ Overzicht:
 |---|
 | [(Pseudo-) element, (pseudo-) class, id, ...-selectors](./C2a.%20Selectors%20voor%20stijlregels.md)|
 
+| C3. Overerfbare eigenschappen|
+|---|
+| [Volgorde van inheritance](./C3a.%20Overerfbare%20eigenschappen.md)|
+
 | C4. Visuele effecten|
 |---|
 | [Borders/randen](./C4a.%20Visuele%20effecten.md)|
