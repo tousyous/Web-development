@@ -60,6 +60,8 @@ Elementen die doorlopen in de regel worden **inline elementen** genoemd. Deze he
 * `<span>`
 * `<em>`
 
+Het is mogelijk om **inline-block elementen verticaal te centreren** op een regel met behulp van de `verticle-align: middle` eigenschap.
+
 ## Het positioneringsschema
 
 Met het positioneringsschema kan je elementen plaatsen buiten de *natuurlijke flow* van de pagina. 
@@ -76,7 +78,10 @@ Een zwevend element:
 * wordt langs de linker- of rechterrand van het *parent* element geplaatst
 * heeft een vaste breedte (`width`)
 * de andere boxen krijgen een plaats naast het *float* element en herkennen het float element niet meer in de normale flow van de pagina
-* om de volgende box na het float element te plaatsen wordt `clear` gebruikt
+* om de volgende box onder het float element te plaatsen wordt `clear` gebruikt
+    * dit is enkel **zinvol** bij zwevende `display: block` elementen, 
+    * **niet** zinvol bij `inline(-block)` elementen
+
 
 ```css
 .floatleft40 {
@@ -105,12 +110,84 @@ Een zwevend element:
     height: 200px;
 }
 ```
+<br>
 
+Om **twee boxen gelijkmatig naast elkaar te verdelen** over een pagina, wordt de `box-sizing` property gebruikt:
+* `box-sizing: content-box;` breedte en hoogte obv content
+* `box-sizing: border-box;` breedte en hoogte obv content, padding en border
+
+Dit werkt zowel met *float* als met *inline-block* in combinatie met een *width*.
+<br>
+
+```css
+div1 {
+    width: 50%;
+    border: 1px solid black;
+    float: left;
+    padding: 10px;
+    box-sizing: border-box;
+}
+
+div2 {
+    width: 50%;
+    border: 1px solid black;
+    display: inline-block;
+    padding: 10px;
+    box-sizing: border-box;
+}
+```
 
 
 ### B) Relatief positioneren
 
+De ``position`` eigenschap heeft als mogelijke waarden: *static*, *fixed*, **absolute**, **relative**. Enkel de laatste twee worden besproken.
+
+De eigenschap `position: relative` laat toe om een element tov zijn gebruikelijke positie te verplaatsen. De originele plaats blijft wel behouden.
+
+Om een element 80px naar beneden en 20px naar rechts te verplaatsen:
+```css
+.move {
+    position: relative;
+    top: 80px;
+    left: 20px;
+}
+```
+
+Relatief positioneren is bijzonder bruikbaar om binnen het element een ander element absoluut te positioneren. 
+
 ### C) Absoluut positioneren
+
+Geeft een element een plaats tov een **referentiebox** (een ouder-element met een niet-static, bijv. **absolute** of **relative**, position). Indien zo'n ouder-elemnt er niet is, wordt het `body`-element genomen.
+
+Voor een span element binnen een div:
+
+```css
+div {
+    position: relative; /* top en left zijn default 0 */
+    width: 150px;
+    height: 100px;
+}
+
+span {
+    position: absolute;
+    top: 20px;
+    left: 50px;
+}
+```
+
+### D) Fixed positioning
+
+Een element met een `position: fixed` waarde, heeft een vaste plaats tov de viewport, bijvoorbeeld onderaan rechts:
+
+```css
+div.fixed {
+    position: fixed;
+    bottom: 0;
+    right: 0;
+    width: 300px;
+    border: 3px solid #73AD21;
+}
+```
 
 <br>
 
