@@ -1,0 +1,33 @@
+div {
+    border: 1px solid black;
+    padding: 5px;
+}
+
+section {
+    margin: 10px;
+}
+
+.floatleft40 {
+    background: green;
+    float: left;
+    width: 40%;
+    height: 100px;
+    margin-right: 10px;
+}
+.nofloat {
+    background: blue;
+    height: 200px;
+}
+
+.floatright40 {
+    background: red;
+    float: right;
+    width: 40%;
+    height: 100px;
+}
+
+.clear {
+    clear: both;
+    background: blue;
+    height: 200px;
+}
