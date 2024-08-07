@@ -1,0 +1,35 @@
+/* breedte van pagina en horizontale centrering bepalen */
+
+div#container {
+    width: 90%;
+    margin: auto;
+}
+
+header {
+    background-color: #FF9;
+}
+
+
+/* drie delen pagina naast elkaar verdelen */
+
+nav {
+    float: left;
+    width: 20%;
+}
+div#content {
+    float: left;
+    width: 50%;
+    background-color: #CCC;
+}
+div#sidebar {
+    float: left;
+    width: 30%;
+}
+
+
+/* footer clearen */
+
+footer {
+    clear: both;
+    background-color: #FF9;
+}
