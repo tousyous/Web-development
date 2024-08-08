@@ -17,6 +17,7 @@ Een voorbeeld:
 <meta name="keywords" content="HTML, CSS, JS" /> 
 <meta name="description" content="Een pagina over het web" />
 <meta name="author" content="firstname lastname" /> 
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
 <meta http-equiv="refresh" content="30" /> 
 
 <link rel="stylesheet" href="styles/style.css" />
