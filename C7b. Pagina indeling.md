@@ -38,7 +38,7 @@ Met CSS Grid wordt een **grid structuur** van de layout gedefinieerd: *het aanta
 Om een grid structuur aan te maken is een container nodig:
 
 ```css
-.container {
+.grid-container {
     display: grid;
 }
 ```
@@ -46,11 +46,11 @@ Om een grid structuur aan te maken is een container nodig:
 Kolommen en rijen worden met **fractions** `fr` gedefinieerd:
 
 ```css
-.container {
+.grid-container {
     display: grid;
     grid-template-columns: 1fr 1fr 1fr 1fr;     /* 4 kolommen */
     grid-template-rows: 1fr 1fr 1fr;            /* 3 rijen */
-    gap: .5rem .8rem;
+    gap: .5rem .8rem;                           /* row - column */
     justify-items: stretch;
 }
 ```
@@ -73,6 +73,11 @@ Elk item kan je ook, los van de HTML indeling, een **begin- en eindcoördinaat**
 .item1 {
     grid-column-start: 1;
     grid-column-end: 3; /* loopt van eerste tot derde gridlijn = 2 blokken */
+}
+
+.item2 {
+    grid-column: 1;
+    grid-row: 1; /* item op positie 1:1, zonder end te definiëren */
 }
 ```
 
