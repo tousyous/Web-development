@@ -45,6 +45,25 @@ Deze code wordt daarom standaard aan een nieuwe Javascript file template toegevo
 
 Wanneer de verwijzing naar een element werd opgevraagd, kan je de inhoud van het element raadplegen/wijzigen met behulp van de `.innerHTML` eigenschap.
 
+Deze eigenschap is bijzonder bruikbaar bij het aanpassen van `<p>`, `<ul>` en andere elementen.
+
+## Inhoud van een tekstveld raadplegen: `.value`
+
+Je kan de tekst in een tekstveld bemachtigen via de 'value' property van het corresponderende element uit de DOM-tree, nadat je de verwijzing hebt opgevraagd.
+
+- Het invoerveld van een [formulier](./H2c.%20Formulieren.md): 
+```html
+<input type="text" name="invoerveld" id="invoerveld">
+```
+
+- De waarde via JS opvragen:
+```js
+let invoerveld = document.getElementById("invoerveld");
+console.log(invoerveld.value);
+```
+
+Deze methode is **niet bruikbaar** voor bijv. een `<p>`-element.
+
 <br>
 
 ---
