@@ -2,7 +2,7 @@
 
 Deze les introduceerde je aan **variabelen**, een krachtig concept dat je in al je toekomstige programmeeractiviteiten zult gebruiken.
 
-Variabelen bewaren herbruikbare gegevens in een programma en koppelen deze aan een naam. Variabelen worden opgeslagen in het geheugen.
+Variabelen bewaren herbruikbare gegevens in een programma en koppelen deze aan een naam. Variabelen worden opgeslagen in het geheugen en hebben een bepaalde [scope](#scope).
 - Variabelen die niet zijn geïnitialiseerd, slaan het primitieve gegevenstype `undefined` op.
 
 <hr>
@@ -86,6 +86,8 @@ Laten we de volgende termen herzien:
 - **Scope pollution** treedt op wanneer te veel variabelen in een namespace bestaan of wanneer variabelennamen opnieuw worden gebruikt.
 
 Terwijl je verdergaat met je programmeerreis, onthoud dan om best practices te gebruiken bij het declareren van je variabelen! Het strak afbakenen van je variabelen zorgt ervoor dat je code schoon, georganiseerd en modulair is.
+
+> **Introduceer in je programma's zo weinig mogelijk globale variabelen!**
 
 
 <br>
