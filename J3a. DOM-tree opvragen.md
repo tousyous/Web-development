@@ -29,7 +29,7 @@ document.getElementsByTagName("img");
 
 ## JS code uitvoeren NA het opbouwen van de DOM-tree
 
-Om te bekomen dat de browser bepaalde code pas uitvoert eenmaal te DOM-tree klaar is, kun je onderstaand fragment gebruiken:
+Om te bekomen dat de browser bepaalde code pas uitvoert eenmaal te DOM-tree klaar is, kun je gebruik maken van een **Window load event**:
 ```js
 const setup = () => {
 ...
