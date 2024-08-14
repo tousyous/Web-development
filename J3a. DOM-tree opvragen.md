@@ -47,6 +47,23 @@ Wanneer de verwijzing naar een element werd opgevraagd, kan je de inhoud van het
 
 Deze eigenschap is bijzonder bruikbaar bij het aanpassen van `<p>`, `<ul>` en andere elementen.
 
+## Tekstuele inhoud van een element (en kinderen) raadplegen: `.textContent`
+
+Je krijgt de tekst uit het element en al zijn afstammelingen in 1 grote string. HTML code in deze eigenschap wordt niet verwerkt, maar gewoon geprint. 
+
+```html
+<p id="txtDemo">Dit is een <a href="...">hyperlink</a> waarop je kunt klikken.</p>
+```
+
+JS code:
+
+```js
+let txtDemo = document.getElementById("txtDemo");
+console.log(txtDemo.textContent); // Dit is een hyperlink waarop je kunt klikken.
+```
+
+- beperk je tot de `.textContent` van elementen die **geen kinderen** hebben
+
 ## Inhoud van een tekstveld raadplegen: `.value`
 
 Je kan de tekst in een tekstveld bemachtigen via de 'value' property van het corresponderende element uit de DOM-tree, nadat je de verwijzing hebt opgevraagd.
