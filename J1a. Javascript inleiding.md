@@ -126,6 +126,18 @@ let tekst='Hello world';
 console.log(tekst.charAt(1));   // "e"
 ```
 
+Om een **zoektekst op te zoeken** in een String heb je twee methodes: `.indexOf()` en `.lastIndexOf()`
+
+```js
+tekst.indexOf(zoektekst);       // begint zoektocht vooraan de tekst
+tekst.indexOf(zoektekst, startIndex);       // start met zoeken bij startIndex
+
+tekst.lastIndexOf(zoektekst);   // begint zoektocht achteraan de tekst
+tekst.lastIndexOf(zoektekst, startIndex);
+```
+- retourneert `-1` indien niet gevonden
+- test via `(tekst.lastIndexOf(zoektekst) != -1)`
+
 ### E) Built-in Objects
 
 Het built-in `Math` object heeft enkele complexere wiskundige functies, zoals de `.random()` methode om **een willekeurig getal** te genereren:
