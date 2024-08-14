@@ -43,6 +43,8 @@ A) **Tekstvak en password**
 <input type="text" name="invoerveld" size="20" maxlength="20" value="startwaarde">
 <input type="password" name="paswoord" size="10" maxlength="10">
 ```
+- vereist `name` en bij voorkeur ook `id` voor javascript
+- laat een regexp `pattern="[1-9][0-9]{3}"` attribuut toe (bijv. postcode)
 
 B) **Email en webadres**
 
@@ -86,6 +88,7 @@ G) **Checkbox**
 ```html
 <input type="checkbox" name="checkbox" value="aanwezig" checked="checked">
 ```
+- elke chekbox heeft zijn eigen `name`, `id`, `value` (!) en `label`
 
 H) **Radiobuttons en keuzelijst**
 
@@ -94,6 +97,8 @@ H) **Radiobuttons en keuzelijst**
 <input type="radio" name="geslacht" value="v">
 <input type="radio" name="geslacht" value="x">
 ```
+- radiobuttons hebben dezelfde `name`, een verschillende `id` en `value` (!)
+- elke radiobutton heeft zijn eigen `label`
 
 ```html
 <select name="geslacht" size="3" multiple>
@@ -108,6 +113,13 @@ I) **Verborgen**
 ```html
 <input type="hidden" name="verborgenInfo" value="verborgenWaarde">
 ```
+
+J) **File upload**
+
+```html
+<input type="file" name="bestand" id="bestand">
+```
+- heeft geen `label` nodig
 
 
 <br>
