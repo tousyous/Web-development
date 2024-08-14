@@ -76,6 +76,22 @@ Primitieve datatypes:
 Andere:
 - **Object**: Collections of related data.
 
+Het is mogelijk om een **conversie** van datatypes te doen:
+
+```js
+// van String naar Number
+let getalAlsTekst="123";
+let getalAlsNumber=parseInt(getalAlsTekst, 10); // 123
+
+// van Number naar String
+let aantal=10;
+let aantalAlsTekst=aantal.toString(); // "10"
+
+// een getal beperken in het aantal cijfers
+let getal=1234.56789
+console.log( getal.toFixed(2) );    // toont "1234.57" (afronding!)
+```
+
 ### C) String concatenation
 
 De `+` operator kan gebruikt worden om Strings samen te voegen:
