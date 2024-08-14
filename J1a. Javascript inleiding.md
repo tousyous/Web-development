@@ -119,6 +119,13 @@ De `.trim()` methode **verwijdert alle whitespaces** aan het begin en einde van 
 console.log('    Remove whitespace   '.trim());
 ```
 
+De `.charAt(index)` bepaalt welk karakter op index staat van een string:
+
+```js
+let tekst='Hello world';
+console.log(tekst.charAt(1));   // "e"
+```
+
 ### E) Built-in Objects
 
 Het built-in `Math` object heeft enkele complexere wiskundige functies, zoals de `.random()` methode om **een willekeurig getal** te genereren:
