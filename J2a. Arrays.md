@@ -1,4 +1,10 @@
-# Codecademy "Arrays"
+# Arrays
+
+Inhoudsopgave:
+- [Codecademy over Arrays](#codecademy-arrays)
+- [Arrays sorteren](#arrays-sorteren)
+
+## Codecademy "Arrays"
 
 In deze les hebben we de volgende concepten over **arrays** geleerd:
 
@@ -80,6 +86,40 @@ console.log(concept);
 const numberClusters = [[1, 2], [3, 4], [5,6]];
 const target = numberClusters[2][1]; //6
 ```
+
+## Arrays sorteren
+
+Om arrays te sorteren bestaat er een ingebouwde `.sort()` functie. Het resultaat van deze functie is echter afhankelijk van hoe de sortering gebeurt. Om zelf te bepalen hoe de sortering plaatsvindt, kan je een optionele **vergelijkingsfunctie** als parameter meegeven.
+
+De vergelijkingsfunctie kan drie resultaten retourneren:
+- negatief als a < b
+- 0 indien a = b
+- positief als a > b
+
+Array sorteren met compare functie:
+
+```js
+let array1=[34, 67, 12, 5, 23];
+let array2=["zebra", "aap", "giraf", "ezel"];
+array1.sort(compareNumbers);
+array2.sort(compareStrings);
+```
+
+Sorteren van getallen met behulp van vergelijkingsoperatoren:
+```js
+const compareNumbers = (a,b) => {
+  return a-b; // enkel negatief, positief of nul
+}
+```
+
+Sorteren van Strings met behulp van de `.localeCompare()` functie:
+```js
+const compareStrings = (a,b) => {
+  return a.localeCompare(b);
+}
+```
+
+> Gebruik de gepaste vergelijkingsfunctie afhankelijk van het datatype van de elementen in de array!
 
 <br>
 
