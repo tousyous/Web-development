@@ -1,0 +1,23 @@
+body {
+    width: 95%;
+    margin: 20px auto;
+    font-family: Verdana, Geneva, Tahoma, sans-serif;
+}
+
+div.row {
+    display: block;
+    margin: 10px 0;
+}
+
+.links {
+    float: left;
+    width: 160px;
+}
+
+form select#bestelling {
+    vertical-align: top;
+}
+
+
+
+

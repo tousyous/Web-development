@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="nl">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="formwaarden_opvragen.css">
+    <script type="text/javascript" charset="utf-8"
+            src="formwaarden_opvragen.js"></script>
+    <title>formwaarden</title>
+</head>
+<body>
+<form action="">
+    <!-- checkbox -->
+    <div class="row"><label for="roker" class="links">Is roker</label>
+        <input type="checkbox" name="roker" id="roker" value="roker"></div>
+    <!-- radiobuttons -->
+    <div class="row"><label class="links">Moedertaal</label>
+        <input type="radio" name="moedertaal" id="nl" value="nl" checked="checked"><label for="nl">Nederlands</label>
+        <input type="radio" name="moedertaal" id="fr" value="fr"><label for="fr">Frans</label>
+        <input type="radio" name="moedertaal" id="en" value="en"><label for="en">Engels</label></div>
+    <!-- single select -->
+    <div class="row"><label class="links" for="buurland">Favoriete buurland</label>
+        <select name="buurland" id="buurland">
+            <option value="Nederland">Nederland</option>
+            <option value="Frankrijk">Frankrijk</option>
+            <option value="Duitsland">Duitsland</option>
+        </select></div>
+    <!-- multi select -->
+    <div class="row"><label class="links" for="bestelling">Bestelling</label>
+        <select name="bestelling" id="bestelling" size="6" multiple>
+            <option value="aardappelen">aardappelen</option>
+            <option value="brood">brood</option>
+            <option value="melk">melk</option>
+            <option value="biefstuk">biefstuk</option>
+            <option value="chips">chips</option>
+            <option value="krant">krant</option>
+        </select></div>
+    <!-- submit -->
+    <div class="row">
+        <button type="submit" name="submit" id="submit">Toon resultaat</button>
+    </div>
+</form>
+</body>
+</html>
