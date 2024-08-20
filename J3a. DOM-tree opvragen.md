@@ -2,7 +2,7 @@
 
 Om toegang te krijgen tot de DOM-tree van de huidige pagina wordt een  (voorgedefinieerde) **`document` globale variabele** gebruikt.
 
-De onderdelen van de DOM-tree noemt men nodes (zie [CSS DOM](./C1b.%20CSS%20Document%20Object%20Model.md))
+De onderdelen van de DOM-tree noemt men **nodes** (zie [CSS DOM](./C1b.%20CSS%20Document%20Object%20Model.md)) en niet DOM-tree elementen.
 
 ## DOM verwijzing opvragen
 
@@ -26,6 +26,42 @@ document.getElementsByClassName("xyz");
 ```js
 document.getElementsByTagName("img");
 ```
+<hr><br>
+
+Een vierde (en vijfde) methode laat toe om elementen te selecteren op basis van een **selector**. Voor een overzicht van mogelijke selectors zie [C2a. Selectors voor stijlregels](C2a.%20Selectors%20voor%20stijlregels.md).
+
+- Om een verwijzing naar **het eerste element** van een selector (hier een id) te bekomen.
+    - Geeft *null* indien er geen waarde is.
+
+```js
+document.querySelector("#id");
+```
+
+- Om een verzameling van verwijzingen naar **alle elementen** op basis van een selector te bekomen.
+    - Geeft een NodeList als resultaat.
+
+```js
+/* alle elementen van een bepaalde class */
+document.querySelectorAll(".classname");
+
+/* alle form elementen met aan bepaald "name" attribuut */
+document.querySelectorAll("[name='voornaam']");
+```
+<br>
+
+## DOM verwijzingen van kinderen opvragen
+
+Het is niet alleen mogelijk om op documentniveau DOM verwijzingen op te vragen, maar ook binnen een verwijzing zelf. Met andere woorden, zoeken binnen **kinderen van een element**.
+
+```js
+/* een contactformulier op basis van id */
+let frmContact = document.getElementById("#frmContact");
+
+/* alle elementen binnen dit formulier met een errorMessage class */
+let errorMessages = frmContact.getElementsByClassName("errorMessage");
+```
+
+<br>
 
 ## JS code uitvoeren NA het opbouwen van de DOM-tree
 
