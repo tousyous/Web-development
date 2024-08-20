@@ -23,6 +23,18 @@ Volgende afspraken/naamgevingen worden vastgelegd:
 
 &nbsp;
 
+## DOM-tree node vs. DOM-tree element
+
+Wanneer een webpagina door een browser wordt gemaakt, bestaat deze uit **een boom van nodes**:
+- Alle delen van de boom, zijn **nodes**: de head, body, andere HTML-tags, tekst, attributen, ...
+- De meeste nodes stellen **elementen** voor, maar er bestaan ook nodes die géén elementen zijn:
+    - attribute nodes
+    - text nodes
+    - CDATA section nodes (?)
+    - comment nodes
+    - document node
+    - document type node
+
 ---
 
 &larr; Terug naar [**OVERZICHT**](./README.md#overview).
