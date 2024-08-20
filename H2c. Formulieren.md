@@ -86,7 +86,7 @@ F) **Textarea**
 G) **Checkbox**
 
 ```html
-<input type="checkbox" name="checkbox" value="aanwezig" checked="checked">
+<input type="checkbox" name="checkbox" id="checkbox" value="aanwezig" checked="checked">
 ```
 - elke chekbox heeft zijn eigen `name`, `id`, `value` (!) en `label`
 
