@@ -60,6 +60,30 @@ sliders[0].addEventListener("change", update);
 sliders[0].addEventListener("input", update);
 ```
 
+## Event handling
+
+Elke event listener functie heeft een **parameter** die het event voorstelt dat zich voordeed. 
+
+- `event.target` omvat het DOM-tree element waar het event zich voordeed
+- `event.currentTarget` is het DOM-tree element wiens event listener we aan het uitvoeren zijn
+    - wordt soms vervangen door `this`, maar is minder betrouwbaar (en niet bruikbaar in arrow functies)
+
+```js
+const klik = (event) => {
+    console.log("target is " + event.target.nodeName 
+    + ", currentTarget is " + event.currentTarget.nodeName);
+};
+```
+
+Het kan handig zijn om een event listener aan **een ancestor** te koppelen:
+- een *section* heeft verschillende *img* children
+- ipv aan elk *img* element een event listener te koppelen, wordt de event listener aan de *section* gekoppeld
+
+Om het **event afhandeling** nog beter te controleren bestaan er nog twee functies:
+- `event.stopPropagation()`: stop de bubbling fase (de listeners van ancestors worden niet verwittigd)
+- `event.preventDefault()`: stop het standaard gedrag (bijv. navigatie naar een andere pagina bij het klikken op een link)
+- `return false;` uit de event listener = beide voorgaande samen
+
 <br>
 
 ---
