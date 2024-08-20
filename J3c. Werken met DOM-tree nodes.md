@@ -73,7 +73,7 @@ Het is mogelijk om een **custom attribuut** aan een element toe te voegen, op vo
 elementNode.setAttribute("data-persoon", "4012"); // stel een custom data-persoon attribuut in 
 ```
 
-### 3. Nodes toevoegen `.createElement()` en verwijderen `.removeChild()`
+### 3. Nodes toevoegen `.appendChild()` en verwijderen `.removeChild()`
 
 Een node aan de DOM-tree toevoegen of verwijderen gebeurt via de parent node:
 
