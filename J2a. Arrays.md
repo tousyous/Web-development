@@ -105,14 +105,14 @@ array1.sort(compareNumbers);
 array2.sort(compareStrings);
 ```
 
-Sorteren van getallen met behulp van vergelijkingsoperatoren:
+Sorteren van **getallen** met behulp van vergelijkingsoperatoren:
 ```js
 const compareNumbers = (a,b) => {
   return a-b; // enkel negatief, positief of nul
 }
 ```
 
-Sorteren van Strings met behulp van de `.localeCompare()` functie:
+Sorteren van **Strings** met behulp van de `.localeCompare()` functie:
 ```js
 const compareStrings = (a,b) => {
   return a.localeCompare(b);
