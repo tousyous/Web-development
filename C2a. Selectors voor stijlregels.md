@@ -12,7 +12,7 @@ Er bestaan verschillende soorten selectors:
 |[Element-selector](#element-selector)|Selectie op basis van type element (h1, div, p)|
 |[Class-selector](#class--en-id-selectoren)|Selectie op basis van het attribuut **class**<br>(kan meerdere keren voorkomen)|
 |[Id-selector](#class--en-id-selectoren)|Selectie op basis van het unieke **id**-attribuut|
-|Attribuut-selector||
+|[Attribuut-selector](#attribuutselector)|Selectie op basis van een attribuutwaarde|
 |[Pseudo-element selector](#pseudo-element-selectors) |Selecteert een deel van een element (eerste letter, voor of na, ...) |
 |[Pseudo-class selector](#pseudo-class-selector)|Selectie van een element op basis van een eigenschap (bezocht, actief, focus, ...)|
 
@@ -201,6 +201,47 @@ p:first-of-type {
 /*oneven rijen in een tabel*/
 tr:nth-child(2n+1) {
     background-color: #ccc;
+}
+```
+
+&nbsp;
+
+## Attribuutselector
+
+De **CSS-attribuutselector** komt overeen met elementen op basis van het feit dat het element een specifiek attribuut expliciet heeft ingesteld, met opties voor het definiëren van een overeenkomst op basis van een attribuutwaarde of een deel van de waarde. ([meer info](https://developer.mozilla.org/en-US/docs/Web/CSS/Attribute_selectors))
+
+Voorbeelden:
+
+```css
+/* <a> elements with a title attribute */
+a[title] {
+  color: purple;
+}
+
+/* <a> elements with an href matching "https://example.org" */
+a[href="https://example.org"]
+{
+  color: green;
+}
+
+/* <a> elements with an href containing "example" */
+a[href*="example"] {
+  font-size: 2em;
+}
+
+/* <a> elementen wiens href attribuut start met "https:" */
+a[href^="https:"] {
+   font-weight: bold;
+}
+
+/* <a> elements with an href ending ".org", case-insensitive */
+a[href$=".org" i] {
+  font-style: italic;
+}
+
+/* <a> elements whose class attribute contains the word "logo" */
+a[class~="logo"] {
+  padding: 2px;
 }
 ```
 
