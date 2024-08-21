@@ -1,58 +1,97 @@
 # Javascript Objecten
 
 Overzicht:
-- [Date() objecten](#date-objecten)
 - [Objecten maken](#objecten-maken)
-
-## Date objecten
-
-Het huidige tijdstip (datum en tijd) kan je achterhalen met (zie [doc](https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Date)):
-
-```js
-let today = new Date();
-```
-
-Om echt met data te werken, gebruik je beter een library zoals:
-- moment.js
-- xdate
-
-Een datum aanmaken kan op verschillende manieren en vereist vaak het ISO-8601 formaat. Enkele voorbeelden:
-
-```js
-var verjaardag = new Date('December 17, 2020 03:24:00');
-var verjaardag = new Date('2020-12-17T03:24:00');
-var verjaardag = new Date(2020, 11, 17);
-var verjaardag = new Date(2020 11, 17, 3, 24, 0);
-```
-
-Om een tekstvoorstelling van een datum te maken, bestaan er verschillende mogelijkheden:
-
-```js
-const event = new Date('2020-04-10T23:15:30');
-
-console.log(event.toString());
-// "Fri Apr 10 2020 23:15:30 GMT+0200 (Midden-Europese zomertijd)"
-// afhankelijk van je tijdszone
-
-console.log(event.toISOString());
-// "2020-04-10T21:15:30.000Z"
-// altijd in zero UTC offset (dus 2 uur verschil)
-
-console.log(event.toDateString());
-// "Fri Apr 10 2020"
-
-console.log(event.toTimeString());
-// "23:15:30 GMT+0200 (Midden-Europese zomertijd)"
-
-console.log(event.getDate() + "-"+ (event.getMonth()+1) + "-" + event.getFullYear() + " " + event.getHours()
-+":"+event.getMinutes() +":"+event.getSeconds());
-// "10-4-2020 23:15:30"
-// getMonth() geeft de maand als een getal tussen 0 en 11 (januari is maand 0 daarom + 1)
-```
-
-Het verschil tussen twee date objecten levert een tijd in *ms* op.
+- [JSON notatie](#json-notatie)
 
 ## Objecten maken
+
+Sinds ECMAscript 6 ondersteunt Javascript het gebruik van klassen, maar deze zijn nog niet overal beschikbaar. 
+
+Voorlopig beperken we ons tot het rechtstreeks **aanmaken van objecten, zonder klassen** met behulp van de `{}` notatie. Binnen de objecten worden variabelen als *properties* toegevoegd en opgevraagd met de dot `.` notatie:
+
+```js
+let student1 = {};  // leeg object
+
+student1.voornaam = "Tous";
+student1.achternaam = "Yous";
+student1.adres = {}; // leeg object binnen object
+student1.adres.gemeente = "8200";
+
+console.log(student1.voornaam + " woont in " + student1.adres.gemeente);
+```
+
+Alternatief kan je een **object literal** (= een vaste waarde, niet variabel, die direct in een script worden meegegegeven) gebruiken om een object aan te maken:
+- de properties worden binnen de `{}` benoemd
+- er wordt een `:` gebruikt ipv een "="
+- properties worden gescheiden door een `,`
+
+```js
+let postcodeVanBrugge = "8200";
+
+let student1 = {
+    voornaam : "Tous",
+    achternaam : "Yous", 
+    adres : {               // een object
+        gemeente : postcodeVanBrugge,
+        straat : "Kerkweg",
+        nummer : "16a"
+    },
+    ouders : ["ma", "pa"]   // een array
+};  
+```
+
+Een eigenschap **verwijderen** kan met `delete object.property`:
+
+```js
+delete student1.adres;
+```
+
+Een eigenschap die niet bestaat, levert `undefined` op:
+
+```js
+console.log(student1.postcode); // undefined
+```
+
+Alternatief kan je een property **aanspreken** met behulp van de `[]` notatie:
+- dit werkt gelijkaardig aan de *querySelector*, waar de waarde tussen "" moet geplaatst worden
+- we gebruiken deze notatie enkel wanneer de naam van de property speciale tekens (zoals spaties) bevat OF uit een variabel komt
+
+```js
+console.log(student1["voornaam"]);  // Tous
+console.log(student1.voornaam);     // Tous
+
+let opTeVragenEigenschap = "voornaam";
+console.log(student1[opTeVragenEigenschap]);  // Tous
+```
+<br>
+
+## JSON notatie
+
+> **J**ava**S**cript **O**bject **N**otatie
+
+JSON is een tekstvoorstelling van objecten in Javascript. Maw: **een String met de object literal notatie**.
+
+JSON wordt gebruikt als:
+- data uitwisselingsformaat (bijv. in een http request of response)
+- data opslagformaat (bijv. in een cookie of local storage)
+
+Om een **JSON string aan te maken** van een object wordt de `JSON.stringify(object)` functie gebruikt:
+
+```js
+let student1 = {
+    voornaam : "Tous",
+    achternaam : "Yous"
+}; 
+
+let tekst = JSON.stringify(student1);
+```
+
+Omgekeerd wordt een **object aangemaakt van JSON tekst** met `JSON.parse(tekst)`:
+
+```js
+let student1 = JSON.parse(tekst);
+```
 
 <br>
 
