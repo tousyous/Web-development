@@ -1,8 +1,15 @@
-# Codecademy "Variables & Scope"
+# Variabelen en Scope
+
+Overzicht:
+- [Codecademy "Variables"](#codecademy-variables)
+- [Codecademy "Scope"](#codecademy-scope)
+- [Globale variabelen](#globale-variabelen)
+
+## Codecademy "Variables"
 
 Deze les introduceerde je aan **variabelen**, een krachtig concept dat je in al je toekomstige programmeeractiviteiten zult gebruiken.
 
-Variabelen bewaren herbruikbare gegevens in een programma en koppelen deze aan een naam. Variabelen worden opgeslagen in het geheugen en hebben een bepaalde [scope](#scope).
+Variabelen bewaren herbruikbare gegevens in een programma en koppelen deze aan een naam. Variabelen worden opgeslagen in het geheugen en hebben een bepaalde [scope](#codecademy-scope).
 - Variabelen die niet zijn geïnitialiseerd, slaan het primitieve gegevenstype `undefined` op.
 
 <hr>
@@ -70,7 +77,7 @@ newVariable = 1;
 console.log(typeof newVariable); //number
 ```
 
-## Scope
+## Codecademy "Scope"
 
 In deze les heb je geleerd over scope en hoe dit de toegankelijkheid van verschillende variabelen beïnvloedt.
 
@@ -89,6 +96,38 @@ Terwijl je verdergaat met je programmeerreis, onthoud dan om best practices te g
 
 > **Introduceer in je programma's zo weinig mogelijk globale variabelen!**
 
+## Globale variabelen
+
+Globale variabelen laten toe om gegevens te onthouden over verschillende functie-oproepen heen. Let hierbij op voor **naam-conflicten** en beperk dus het gebruik van globale variabelen!
+
+On Javascript zijn globale variabelen **properties van het `window` object**.
+- dit object heeft al zeer veel voorgedefinieerde properties
+
+Om de vervuiling van de global namespace tegen te gaan, lan men gebruik maken van *closures* en *Immediately Invoked Function Expressions* (IIFE) om variabelen af te schermen (worden hier niet besproken).
+
+Om de risico's te beperken, wordt aangeraden om alle globale variabelen **samen in één object `global` te bundelen**:
+
+```js
+// een globaal object definiëren
+
+let global = {
+    score: 0,
+    players: [],
+    PATH_PREFIX: "images\sprite",
+    PATH_SUFFIX: ".png"
+}
+
+// waarden ophalen als properties van het global object
+
+let score = global.score;
+let players = global.players;
+```
+
+Tijdens het debuggen kan je deze gemakkelijk terugvinden in de *Watch* van de developer tools.
+
+Let op:
+- het globale variabele hoort in de context van het huidige HTML document
+- navigeren naar een andere pagina of het herladen van de pagina laat het variabel en zijn waarde verloren gaan :-(
 
 <br>
 
