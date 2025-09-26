@@ -67,6 +67,34 @@ Overzicht:
 
 ### C) JavaScript
 
+Overzicht:
+| J1. Basisconcepten |
+|---|
+| [J1b. Variabelen en Scope](./J1b.%20Variabelen%20en%20Scope.md) |
+| [J1c. Conditional statements](./J1c.%20Conditional%20statements.md) |
+| [J1d. Functions](./J1d.%20Functions.md) |
+| [J1f. Timers, Random](./J1f.%20Timers,%20Random.md) |
+
+| J2. Gegevensstructuren en Loops |
+|---|
+| [J2a. Arrays](./J2a.%20Arrays.md) |
+| [J2b. Loops](./J2b.%20Loops.md) |
+
+| J3. DOM-manipulatie |
+|---|
+| [J3a. DOM-tree opvragen](./J3a.%20DOM-tree%20opvragen.md) |
+| [J3c. Werken met DOM-tree nodes](./J3c.%20Werken%20met%20DOM-tree%20nodes.md) |
+
+| J4. Event-based programming |
+|---|
+| [J4a. Event-based programming](./J4a.%20Event-based%20programming.md) |
+
+| J6. Strings |
+|---|
+| [J6a. String en string-functies](./J6a.%20String%20en%20string-functies.md) |
+
+*Let op: Mogelijk zijn er meer "J" pagina's, zie de [repository](https://github.com/tousyous/Web-development) voor het volledige overzicht.*
+
 ## Notes
 
 Gebruik [DEZE TEMPLATE](00_Template.md) als basis voor nieuwe pagina's.
